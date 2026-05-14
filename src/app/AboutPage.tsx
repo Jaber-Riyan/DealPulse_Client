@@ -14,10 +14,10 @@ export const AboutPage: React.FC = () => {
           >
             <Tag className="w-8 h-8" />
           </div>
-          <h1 className="text-4xl sm:text-6xl font-black text-[var(--text-main)] tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-black text-(--text-main) tracking-tight leading-tight">
             About DealPulse
           </h1>
-          <p className="text-lg sm:text-xl text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-lg sm:text-xl text-(--text-muted) max-w-2xl mx-auto leading-relaxed font-medium">
             Reinventing how shoppers discover premium discounts and real-time flash sales.
           </p>
         </div>
