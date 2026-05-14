@@ -123,7 +123,7 @@ export const LandingPage: React.FC = () => {
                     <Icon className="w-4 h-4" style={{ color: 'var(--accent-primary)' }} />
                     <h4 className="font-bold text-xs uppercase tracking-wider text-[var(--text-main)]">{info.title}</h4>
                   </div>
-                  <p className="text-xs text-[var(--text-muted)] leading-relaxed">{info.desc}</p>
+                  <p className="text-xs text-(--text-muted) leading-relaxed">{info.desc}</p>
                 </div>
               );
             })}
@@ -132,8 +132,8 @@ export const LandingPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link
               to="/feed"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl text-white font-bold shadow-lg transition-all text-base flex items-center justify-center gap-2 group hover:opacity-95"
-              style={{ backgroundColor: 'var(--accent-primary)' }}
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold shadow-lg transition-all text-base flex items-center justify-center gap-2 group hover:opacity-95"
+              style={{ backgroundColor: 'var(--accent-primary)', color: 'black' }}
             >
               <span>Start Discovering Deals</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
