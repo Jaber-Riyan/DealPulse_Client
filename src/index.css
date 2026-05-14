@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Light Mode Palette using provided brand colors */
+    --bg-base: #ffffff;
+    --bg-surface: #c5efcb;
+    --bg-card: #c6dec6;
+    --border-color: #b8d2b3;
+    --text-main: #020402;
+    --text-muted: #647a67;
+    --accent-primary: #647a67;
+    --accent-hover: #3c433b;
+    --accent-light: #a9c5a0;
+    
+    /* Dedicated static brand colors */
+    --color-brand-1: #c5efcb;
+    --color-brand-2: #647a67;
+    --color-brand-3: #020402;
+    --color-brand-4: #1f241f;
+    --color-brand-5: #3c433b;
+    --color-brand-6: #758173;
+    --color-brand-7: #8fa38a;
+    --color-brand-8: #a9c5a0;
+    --color-brand-9: #b8d2b3;
+    --color-brand-10: #c6dec6;
+  }
+
+  .dark {
+    /* Dark Mode Palette adhering strictly to requested dark colors */
+    --bg-base: #020402;
+    --bg-surface: #1f241f;
+    --bg-card: #1f241f;
+    --border-color: #3c433b;
+    --text-main: #c5efcb;
+    --text-muted: #8fa38a;
+    --accent-primary: #a9c5a0;
+    --accent-hover: #b8d2b3;
+    --accent-light: #3c433b;
+  }
+}
+
+/* Global utility classes linked to CSS variables for dynamic mode updates */
+body {
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar for Category Filter matching the theme */
+.theme-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+.theme-scrollbar::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+  border-radius: 9999px;
+}
+.theme-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 9999px;
+}
+.theme-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* Infinite Marquee Scroll Keyframes */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbars utilities */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
