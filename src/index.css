@@ -47,6 +47,20 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+::selection {
+  background-color: var(--accent-primary);
+  color: var(--bg-base);
+}
+
+a {
+  color: var(--accent-primary);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
 /* Custom Scrollbar for Category Filter matching the theme */
 .theme-scrollbar::-webkit-scrollbar {
   height: 6px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AppProvider } from './app/AppContext';
 
 // Pages
@@ -15,6 +15,7 @@ import { NotificationsPage } from './app/NotificationsPage';
 import { AboutPage } from './app/AboutPage';
 import { PrivacyPolicyPage } from './app/PrivacyPolicyPage';
 import { ContactPage } from './app/ContactPage';
+import { NotFoundPage } from './app/NotFoundPage';
 
 export const App: React.FC = () => {
   return (
@@ -33,7 +34,7 @@ export const App: React.FC = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>
